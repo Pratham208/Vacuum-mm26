@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vacuum Chamber</title>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body style="font-family: Sofia Pro">
+        
+        <script>
+            function logic1()
+            {
+                    num1 = document.getElementById("rs").value;
+                    num2 = document.getElementById("ip").value;
+                    if (num2 == 0) {
+                        alert("Pressure can't be 0");
+                    }
+                    num3 = document.getElementById("op").value;
+                    num4 = document.getElementById("ds").value;
+                    num5 = document.getElementById("sc").value;
+                    document.getElementById("result1").innerHTML = (num1 * ( num5 * num2 - num4 * num3 ))+" W";
+
+                    num1 = document.getElementById("rs").value;
+                    num2 = document.getElementById("ip").value;
+                    num3 = document.getElementById("op").value;
+                    num4 = document.getElementById("ds").value;
+                    num5 = document.getElementById("sc").value;
+                    document.getElementById("result2").innerHTML = (( num1 * ( num5 * num2 - num4 * num3 ) ) / num2)+" m3/s";
+            }
+            function logic2()
+            {
+                    num1 = document.getElementById("ms").value;
+                    num2 = document.getElementById("pa").value;
+                    if (num2 == 0) {
+                        alert("Pressure can't be 0");
+                    }
+                    num3 = document.getElementById("tk").value;
+                    num4 = document.getElementById("ts").value;
+                    if (num4 == 0) {
+                        alert("Time can't be 0");
+                    }
+                    document.getElementById("result3").innerHTML = (( num1 * 8.314 * num3 ) / num4)+" W";
+
+                    num1 = document.getElementById("ms").value;
+                    num2 = document.getElementById("pa").value;
+                    num3 = document.getElementById("tk").value;
+                    num4 = document.getElementById("ts").value;
+                    document.getElementById("result4").innerHTML = (( num1 * 8.314 * num3 ) / num2)+" m3/s";
+            }
+        </script>
+        
+        
+        <div class="text-block1">
+                        <h4>Ph-203</h4>
+                        <p>Assignment</p>
+                    </div>
+        <div class="text-block2">
+                        <h4>Pratham </h4>
+                        <p>1901mm26</p>
+                    </div>
+            <div class="topcontainer">
+                <img src="Group%2011.png" alt="Vacuum Chamber" width="100%" height="450">
+                    <div class="heading">Thoughput and pumping speed</div>
+                    <div class="subheading">Vacuum Chamber</div>
+                    
+            </div>
+        
+        
+            <div class="row">
+                
+            <div class="column" style="background-color:#fff;">
+                <div class="Suction"><h2>Suction Chamber</h2></div>
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col-25"><label for="rs">Rotational speed</label></div>
+                            <div class="col-75"><input type="text" id="rs"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25"><label for="ip">Input Pressure (in Pa)</label></div>
+                            <div class="col-75"><input type="text" id="ip"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25"><label for="op">Output Pressure (in Pa) </label></div>
+                            <div class="col-75"><input type="text" id="op"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="ds">Dead Space Volume (in m<sup>3</sup>)</label>
+                            </div>
+                            <div class="col-75"><input type="text" id="ds"></div>
+                        </div>
+                        <div class="row"><div class="col-25">
+                            <label for="sc">Suction chamber Volume (in m<sup>3</sup>)</label></div>
+                            <div class="col-75"><input type="text" id="sc"></div>
+                        </div>
+                        <input type="button" onClick="logic1()" Value="Calculate" />
+                    </form>
+                </div>
+                <p class="res">Calculated Throughput : <span id = "result1"></span></p>
+                <p class="res">Calculated Pumping speed : <span id = "result2"></span></p>
+            </div>
+                
+                
+            <div class="column" style="background-color:#fff;">
+                <div class="Suction"><h2>Gas Equation</h2></div>
+                <div class="container">
+                    <form>
+                        <div class="row1">
+                            <div class="col-25"><label for="ms">Moles of Gas</label></div>
+                            <div class="col-75"><input type="text" id="ms"></div>
+                        </div>
+                        <div class="row1">
+                            <div class="col-25"><label for="pa">Pressure (in Pa)</label></div>
+                            <div class="col-75"><input type="text" id="pa"></div>
+                        </div>
+                        <div class="row1">
+                            <div class="col-25"><label for="tk">Temperature (in K)</label></div>
+                            <div class="col-75"><input type="text" id="tk"></div>
+                        </div>
+                        <div class="row1">
+                            <div class="col-25"><label for="ts">Time (s)</label></div>
+                            <div class="col-75"><input type="text" id="ts"></div>
+                        </div>
+                        <input type="button" onClick="logic2()" Value="Calculate" />
+                    </form>
+                </div>
+                <p class="res">Calculated Throughput : <span id = "result3"></span></p>
+                <p class="res">Calculated Pumping speed : <span id = "result4"></span></p>
+            </div>
+                
+        </div>
+    </body>
+</html>

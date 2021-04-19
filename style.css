@@ -1,0 +1,161 @@
+body  {
+  background-image: url("Mask%20Group%202.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    background-color: #F9FAFB;
+    box-sizing: border-box;
+}
+/* Container holding the image and the text */
+.topcontainer {
+  position: relative;
+  text-align: center;
+  color: white;
+    z-index: -2;
+}
+.text-block2 {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  background-color: black;
+    width: 200px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.text-block1 {
+  position: absolute;
+  bottom: 130px;
+  right: 30px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+    width: 200px;
+}
+/* Centered text */
+.heading {
+  position: absolute;
+  margin-left: 40px;
+    top: 18%;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.subheading {
+  position: absolute;
+  margin-left: 40px;
+    top: 35%;
+    font-size: 32px;
+    font-style: italic;
+}
+
+.column {
+    float: left;
+    width: 540px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 25px;
+    margin-top: -200px;
+    height: 415px;
+    box-shadow: 0px 8px 24px #CEDBDD/* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+    margin: 19px;
+}
+
+
+.col-25 {
+  float: left;
+  width: 60%;
+}
+
+.col-75 {
+  float: left;
+  width: 40%;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+  display: table;
+  clear: both;
+    margin: 29px;
+}
+
+.container{
+    margin-right: 10px;
+}
+
+.Suction{
+    color: #6C63FF;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #6C63FF;
+  border: none;
+  color: white;
+  padding: 14px;
+  cursor: pointer;
+    width: 100%;
+}
+
+input[type=text]:focus {
+  background-color: #DDDDE5;
+}
+
+input[type=text]{
+  width: 100%;
+    border: 1px solid #BFBDEC;
+  border-radius: 2px;
+}
+
+#result1{
+    color: #6C63FF;
+    font-weight: bold;
+}
+#result2{
+    color: #6C63FF;
+    font-weight: bold;
+}
+#result3{
+    color: #6C63FF;
+    font-weight: bold;
+}
+#result4{
+    color: #6C63FF;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 450px) {
+    .column {
+        margin-top: -140px;
+        width: 94%;
+        margin-left: 0px;
+        margin-bottom: 160px;
+        height: 490px;
+    }
+    .text-block {
+        bottom: 140px;
+        right: 100px;
+    }
+    .subheading{
+        top: 36%;
+        left: 60px;
+    }
+    .heading{
+        margin-left: 10px;
+    }
+    .col-25 {
+        width: 100%;
+    }
+    .col-75 {
+        width: 90%;
+    }
+    
+}
