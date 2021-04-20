@@ -131,25 +131,44 @@ input[type=text]{
     font-weight: bold;
 }
 
+@media only screen and (max-width: 1500px){
+    .text-block1 {
+        display: none;
+    }
+    .text-block2 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1210px) {
+    .column {
+        margin-top: -140px;
+        margin-left: 20px;
+        margin-bottom: 160px;
+        height: 410px;
+    }
+}
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 745px){
+    .subheading{
+        top: 50%;
+        left: 150px;
+    } 
+}
+
+@media only screen and (max-width: 600px) {
     .column {
         margin-top: -140px;
         width: 94%;
         margin-left: 0px;
-        margin-bottom: 160px;
-        height: 490px;
-    }
-    .text-block {
-        bottom: 140px;
-        right: 100px;
+        margin-bottom: 500px;
+        height: 500px;
     }
     .subheading{
-        top: 36%;
-        left: 60px;
+        top: 47%;
+        left: 25px;
     }
     .heading{
-        margin-left: 10px;
+        margin-left: 20px;
     }
     .col-25 {
         width: 100%;
